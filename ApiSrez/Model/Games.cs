@@ -7,6 +7,6 @@ namespace ApiSrez.Model
     {
         [Key]
         public int id_Game { get; set; }
-        public string Name { get; set; }
+        public string NameGame { get; set; }
     }
 }

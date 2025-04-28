@@ -6,9 +6,10 @@ namespace ApiSrez.Model
     public class Order
     {
         [Key]
-        public int id_Game { get; set; }
-        public DateTime Time { get; set;}
-        
+        public int id_Order { get; set; }
+        public DateTime TimeStart { get; set;}
+        public DateTime TimeFinish { get; set; }
+
         [Required]
         [ForeignKey("Users")]
         public int User_id { get; set; }

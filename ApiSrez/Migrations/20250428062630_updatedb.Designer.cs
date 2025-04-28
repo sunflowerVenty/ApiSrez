@@ -4,6 +4,7 @@ using ApiSrez.DataBaseContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiSrez.Migrations
 {
     [DbContext(typeof(ContextDb))]
-    partial class ContextDbModelSnapshot : ModelSnapshot
+    [Migration("20250428062630_updatedb")]
+    partial class updatedb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,25 +44,22 @@ namespace ApiSrez.Migrations
 
             modelBuilder.Entity("ApiSrez.Model.Order", b =>
                 {
-                    b.Property<int>("id_Order")
+                    b.Property<int>("id_Game")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id_Order"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id_Game"));
 
                     b.Property<int>("Game_id")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("TimeFinish")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("TimeStart")
+                    b.Property<DateTime>("Time")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("User_id")
                         .HasColumnType("int");
 
-                    b.HasKey("id_Order");
+                    b.HasKey("id_Game");
 
                     b.ToTable("Order");
                 });

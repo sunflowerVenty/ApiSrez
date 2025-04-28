@@ -1,7 +1,7 @@
 ﻿using ApiSrez.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace TestApi3K.DataBaseContext
+namespace ApiSrez.DataBaseContext
 {
     public class ContextDb : DbContext
     {
