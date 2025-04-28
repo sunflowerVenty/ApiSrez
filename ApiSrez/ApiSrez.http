@@ -1,0 +1,6 @@
+@ApiSrez_HostAddress = http://localhost:5215
+
+GET {{ApiSrez_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
